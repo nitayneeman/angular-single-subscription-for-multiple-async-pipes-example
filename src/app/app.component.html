@@ -1,0 +1,18 @@
+<h1>Using Single Subscription for Multiple Async Pipes</h1>
+
+<ng-container *ngIf="users$ | async as users">
+  IDs:
+  <ul>
+    <li *ngFor="let user of users">{{ user.id }}</li>
+  </ul>
+
+  Names:
+  <ol type="1">
+    <li *ngFor="let user of users">{{ user.name }}</li>
+  </ol>
+
+  Emails:
+  <ol type="A">
+    <li *ngFor="let user of users">{{ user.email }}</li>
+  </ol>
+</ng-container>
